@@ -4,6 +4,15 @@
 body {
 	font-family: 'Josefin Sans', sans-serif;
 }
+
+h2 {
+	color: $grey;
+	text-align: center;
+	font-weight: 400;
+	font-size: 2rem;
+	margin: 0;
+}
+
 h3 {
 	font-size: 1.5rem;
 	text-align: center;
@@ -41,6 +50,20 @@ h3 {
 
 .button-secondary {
 	background-color: rgba(0, 0, 0, .18);
+}
+
+.card {
+	box-sizing: border-box;		
+	width: 28%;
+	float: left;		
+	border-radius: .5rem;
+	padding: 2rem 2rem;
+	text-align: center;
+	line-height: 1.8;
+	color: $grey;
+	-webkit-box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);
+	box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);	
 }
 
 // Banner styles
@@ -103,29 +126,55 @@ h3 {
 #services {
 	background-color: $light-grey;
 	padding: 2rem 0 20rem 0;
-	position: relative;
+	position: relative;	
+}
 
-	.service {
-		box-sizing: border-box;
-		background-color: $pale-purple;
-		width: 28%;
-		float: left;
-		margin: -5rem 2.5% 0 2.5%;
-		padding: 2rem 2rem;
-		border-radius: .5rem;
-		text-align: center;
-		line-height: 1.8;
+.service {
+	background-color: $pale-purple;
+	margin: -5rem 2.5% 0 2.5%;
+
+	h3 {
+		padding-bottom: .2rem;
+	}
+	button {
+		margin-top: 1rem;
+	}
+}
+
+// Pricing section
+#pricing {
+	background-color: $light-grey;
+	padding: 2rem 0 37rem 0;
+	
+
+	h2 {
+		padding: 1rem 0 5rem;
+	}
+
+	h3 {
+		padding: 2rem 0;
 		color: $grey;
-		-webkit-box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);
-		-moz-box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);
-		box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);
+	}
 
-		h3 {
-			padding-bottom: .2rem;
-		}
-		button {
-			margin-top: 1rem;
-		}
+	.card {
+		background-color: $white;
+	}
+
+	.card:last-child {
+		position: relative;
+		left: -20px;
+	}
+
+	.wrapper {
+		margin-left: 13%;
+	}
+
+	.hightlight {
+		background-color: $pale-purple;
+		z-index: 2;
+		margin: -1.2rem 0 0;
+		position: relative;
+		left: -10px;;
 	}
 }
 
@@ -176,7 +225,6 @@ h3 {
 	}
 
 }
-
 
 
 // Footer 
