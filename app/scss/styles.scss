@@ -1,0 +1,211 @@
+@import 'global';
+
+// Global styles
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+h3 {
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: 400;
+	margin: 0;
+}
+
+.wrapper {
+	width: 1440px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.button {
+	border: none;
+	border-radius: 50px;
+	text-decoration: none;
+	color: $white;
+	text-align: center;
+	font-weight: 700;
+	padding: .8rem 2.5rem;
+	font-size: 1.1rem;
+	margin: 0 1.2rem;
+}
+
+.button-small {
+	padding: .8rem 1.8rem;
+	font-size: .8rem;
+}
+
+
+.button-highlight {
+	background-color: $green;
+}
+
+.button-secondary {
+	background-color: rgba(0, 0, 0, .18);
+}
+
+// Banner styles
+#banner {
+	background-image: url(../assets/banner_with_gradients.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	header {
+		padding: 2rem 0;
+	}
+
+	#logo {
+		color: $white;
+		float: left;
+		font-size: 1.35rem;
+		margin: 0;
+		span {
+			font-weight: 700;
+		}
+	}
+
+	nav {
+		float: right;
+		a {
+			color: $white;
+			text-decoration: none;
+			padding-left: 3rem;
+			font-size: 1.2rem;
+			font-weight: 700;
+		}
+	}
+
+	.content {
+		padding: 12rem 0 5rem 0;
+		.title, .subtitle {
+			color: $white;
+			text-align: center;
+		}
+		.title {
+			font-size: 3rem;
+			font-weight: 700;
+			margin: 0;
+		}
+		.subtitle {
+			font-size: 2rem;
+			font-weight: 400;
+			margin-bottom: 7.5rem;
+		}
+		.button-wrapper {
+			text-align: center;
+			margin: 3em 0;
+		}
+	}
+
+}
+
+// Services
+
+#services {
+	background-color: $light-grey;
+	padding: 2rem 0 20rem 0;
+	position: relative;
+
+	.service {
+		box-sizing: border-box;
+		background-color: $pale-purple;
+		width: 28%;
+		float: left;
+		margin: -5rem 2.5% 0 2.5%;
+		padding: 2rem 2rem;
+		border-radius: .5rem;
+		text-align: center;
+		line-height: 1.8;
+		color: $grey;
+		-webkit-box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);
+		-moz-box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);
+		box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);
+
+		h3 {
+			padding-bottom: .2rem;
+		}
+		button {
+			margin-top: 1rem;
+		}
+	}
+}
+
+// Contact
+#contact {
+	background-image: url(../assets/contact_with_gradients.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 3rem;
+
+	h3 {
+		padding: 2.5rem 0;
+		color: $white;
+		span {
+			font-weight: 700;
+		}
+	}
+
+	.formContent {
+		background-color: $pale-purple;
+		border-radius: 1.25rem;
+		width: 35%;
+		height: 25rem;
+		margin: 0 auto;
+		padding: 2rem;
+		color: $grey;
+	}
+
+	input, label {
+		display: inline-block;
+		width: 100%;
+		padding-top: 1.875rem;
+		box-sizing: border-box;
+		font-size: .85rem;
+	}
+
+	input, textarea {
+		border: none;
+		background-color: $pale-purple;
+		border-bottom: 1px solid grey;
+		max-width: 100%;
+	}
+
+	button {
+		display: block;
+		margin: 1.5625rem auto 0;
+		font-size: 1rem;
+	}
+
+}
+
+
+
+// Footer 
+footer {
+	height: 3.75rem;
+	background: linear-gradient(to right,$blue, $pink);
+	opacity: .5;
+	position: relative;
+	p {
+		color: $white;
+		font-size: 1rem;
+		font-weight: 700;
+		position: absolute;
+		margin: 0;
+	    top: 50%;
+	    left: 50%;
+	    margin-right: -50%;
+	    transform: translate(-50%, -50%)
+	}
+	.socialMedia {
+		float: right;
+		img {
+		 	margin-top: 15px;
+		 	margin-right: 30px;
+			height: 25px;
+			width: 25px;
+		}		
+	}
+	.socialMedia:last-child {
+		margin-right: 40px;
+	}
+}

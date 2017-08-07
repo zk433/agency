@@ -1,0 +1,26 @@
+{
+  "name": "agency",
+  "version": "1.0.0",
+  "description": "Digital Agency Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zk433/agency.git"
+  },
+  "author": "Zuzana K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zk433/agency/issues"
+  },
+  "homepage": "https://github.com/zk433/agency#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
