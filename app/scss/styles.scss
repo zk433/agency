@@ -4,6 +4,9 @@
 body {
 	font-family: 'Josefin Sans', sans-serif;
 }
+* {
+	box-sizing: border-box;
+}
 
 h2 {
 	color: $grey;
@@ -53,7 +56,6 @@ h3 {
 }
 
 .card {
-	box-sizing: border-box;		
 	width: 28%;
 	float: left;		
 	border-radius: .5rem;
@@ -65,6 +67,7 @@ h3 {
 	-moz-box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);
 	box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.2);	
 }
+
 
 // Banner styles
 #banner {
@@ -118,14 +121,13 @@ h3 {
 			margin: 3em 0;
 		}
 	}
-
 }
 
 // Services
 
 #services {
-	background-color: $light-grey;
-	padding: 2rem 0 20rem 0;
+	background-color: $pale-grey;
+	padding: 2rem 2rem 21rem;
 	position: relative;	
 }
 
@@ -141,10 +143,93 @@ h3 {
 	}
 }
 
+// Portfolio section
+#portfolio {
+	background-color: $white;
+	padding: 3rem 0 3rem 0;
+
+	h2 {
+		padding-bottom: 2rem;
+	}
+
+	.slideshowContainer {
+	    width: 50%;
+	    position: relative;
+	    margin: 0 21%;
+    }
+
+		.mySlide {
+		    display: none;
+		}
+
+		.prev, .next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			margin-top: -1.875rem;
+			padding: 1rem;
+			color: $light-grey;
+			font-size: 2rem;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+		}
+
+/* Position the "left button" to the left and "next button" to the right */
+
+	.prev {
+		left: 20px;
+	}
+	.next {
+	    right: -80px;
+	    border-radius: 3px 0 0 3px;
+	}
+
+/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		    background-color: rgba(0,0,0,0.5);
+		    color: $white;
+		}
+
+/* The dots/bullets/indicators */
+		.dot {
+		    cursor:pointer;
+		    height: 13px;
+		    width: 13px;
+		    margin: 0 2px;
+		    background-color: #bbb;
+		    border-radius: 50%;
+		    display: inline-block;
+		    transition: background-color 0.6s ease;
+		}
+
+		.active, .dot:hover {
+		    background-color: $green;
+		}
+}
+
+/* Fading animation */
+	.fade {
+	  -webkit-animation-name: fade;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+	  0% {opacity: .4} 
+	  100% {opacity: 1}
+	}
+
+	@keyframes fade {
+	  0% {opacity: .4} 
+	  100% {opacity: 1}
+	}
+
 // Pricing section
 #pricing {
-	background-color: $light-grey;
-	padding: 2rem 0 37rem 0;
+	background-color: $pale-grey;
+	padding: 2rem 0 36rem 0;
 	
 
 	h2 {
@@ -152,8 +237,14 @@ h3 {
 	}
 
 	h3 {
-		padding: 2rem 0;
 		color: $grey;
+	}
+
+	h4 {
+		color: $green;
+		font-size: 1.5rem;
+		margin: 0;
+		font-weight: 400;
 	}
 
 	.card {
@@ -176,6 +267,11 @@ h3 {
 		position: relative;
 		left: -10px;;
 	}
+
+	li {
+		list-style-type: circle;
+		text-align: left;
+	}
 }
 
 // Contact
@@ -183,7 +279,7 @@ h3 {
 	background-image: url(../assets/contact_with_gradients.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding-bottom: 3rem;
+	padding-bottom: 3.5rem;
 
 	h3 {
 		padding: 2.5rem 0;
@@ -197,9 +293,9 @@ h3 {
 		background-color: $pale-purple;
 		border-radius: 1.25rem;
 		width: 35%;
-		height: 25rem;
+		height: 27rem;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 0 2rem;
 		color: $grey;
 	}
 
@@ -229,7 +325,7 @@ h3 {
 
 // Footer 
 footer {
-	height: 3.75rem;
+	height: 3.2rem;
 	background: linear-gradient(to right,$blue, $pink);
 	opacity: .5;
 	position: relative;
@@ -256,4 +352,54 @@ footer {
 	.socialMedia:last-child {
 		margin-right: 40px;
 	}
+}
+
+// *****************Modals*****************
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* The Close Button */
+.close {
+	position: relative;
+	top: -40px;
+    color: #aaa;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// Video modal
+#videoModal {
+	display: none;
+	position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+} 
+	
+.modal-content-video {
+    margin: 10% 20%;
+    margin-bottom: 0;
+    width: 58%; /* Could be more or less, depending on screen size */
 }

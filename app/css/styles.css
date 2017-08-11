@@ -1,6 +1,9 @@
 body {
   font-family: 'Josefin Sans', sans-serif; }
 
+* {
+  box-sizing: border-box; }
+
 h2 {
   color: #737373;
   text-align: center;
@@ -41,7 +44,6 @@ h3 {
   background-color: rgba(0, 0, 0, 0.18); }
 
 .card {
-  box-sizing: border-box;
   width: 28%;
   float: left;
   border-radius: .5rem;
@@ -92,8 +94,8 @@ h3 {
       margin: 3em 0; }
 
 #services {
-  background-color: #D9D9D9;
-  padding: 2rem 0 20rem 0;
+  background-color: #f3f3f3;
+  padding: 2rem 2rem 21rem;
   position: relative; }
 
 .service {
@@ -104,14 +106,82 @@ h3 {
   .service button {
     margin-top: 1rem; }
 
+#portfolio {
+  background-color: #ffffff;
+  padding: 3rem 0 3rem 0;
+  /* Position the "left button" to the left and "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* The dots/bullets/indicators */ }
+  #portfolio h2 {
+    padding-bottom: 2rem; }
+  #portfolio .slideshowContainer {
+    width: 50%;
+    position: relative;
+    margin: 0 21%; }
+  #portfolio .mySlide {
+    display: none; }
+  #portfolio .prev, #portfolio .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -1.875rem;
+    padding: 1rem;
+    color: #D9D9D9;
+    font-size: 2rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0; }
+  #portfolio .prev {
+    left: 20px; }
+  #portfolio .next {
+    right: -80px;
+    border-radius: 3px 0 0 3px; }
+  #portfolio .prev:hover, #portfolio .next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff; }
+  #portfolio .dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease; }
+  #portfolio .active, #portfolio .dot:hover {
+    background-color: #9CC6B3; }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: .4; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade {
+  0% {
+    opacity: .4; }
+  100% {
+    opacity: 1; } }
+
 #pricing {
-  background-color: #D9D9D9;
-  padding: 2rem 0 37rem 0; }
+  background-color: #f3f3f3;
+  padding: 2rem 0 36rem 0; }
   #pricing h2 {
     padding: 1rem 0 5rem; }
   #pricing h3 {
-    padding: 2rem 0;
     color: #737373; }
+  #pricing h4 {
+    color: #9CC6B3;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 400; }
   #pricing .card {
     background-color: #ffffff; }
   #pricing .card:last-child {
@@ -125,12 +195,15 @@ h3 {
     margin: -1.2rem 0 0;
     position: relative;
     left: -10px; }
+  #pricing li {
+    list-style-type: circle;
+    text-align: left; }
 
 #contact {
   background-image: url(../assets/contact_with_gradients.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 3rem; }
+  padding-bottom: 3.5rem; }
   #contact h3 {
     padding: 2.5rem 0;
     color: #ffffff; }
@@ -140,9 +213,9 @@ h3 {
     background-color: #EFE0EC;
     border-radius: 1.25rem;
     width: 35%;
-    height: 25rem;
+    height: 27rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 2rem;
     color: #737373; }
   #contact input, #contact label {
     display: inline-block;
@@ -161,7 +234,7 @@ h3 {
     font-size: 1rem; }
 
 footer {
-  height: 3.75rem;
+  height: 3.2rem;
   background: linear-gradient(to right, #7569B8, #FF8AD4);
   opacity: .5;
   position: relative; }
@@ -184,3 +257,58 @@ footer {
       width: 25px; }
   footer .socialMedia:last-child {
     margin-right: 40px; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+/* The Close Button */
+.close {
+  position: relative;
+  top: -40px;
+  color: #aaa;
+  float: right;
+  font-size: 2.5rem;
+  font-weight: 400; }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
+#videoModal {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */ }
+
+.modal-content-video {
+  margin: 10% 20%;
+  margin-bottom: 0;
+  width: 58%;
+  /* Could be more or less, depending on screen size */ }
