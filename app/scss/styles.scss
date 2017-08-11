@@ -129,6 +129,14 @@ h3 {
 	background-color: $pale-grey;
 	padding: 2rem 2rem 21rem;
 	position: relative;	
+
+	img {
+		width: 55px;
+		height:55px;
+		position: fixed;
+		top: 85%;
+		right: 1%;
+	}
 }
 
 .service {
@@ -382,13 +390,13 @@ footer {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: $green;
     text-decoration: none;
     cursor: pointer;
 }
 
 // Video modal
-#videoModal {
+#videoModal, #webDev, #dev, #seo {
 	display: none;
 	position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -402,4 +410,13 @@ footer {
     margin: 10% 20%;
     margin-bottom: 0;
     width: 58%; /* Could be more or less, depending on screen size */
+}
+
+// Modal content
+.modal-content {
+	background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 40px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
 }
