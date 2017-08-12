@@ -4,6 +4,7 @@ var server = require('gulp-server-livereload');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
+var minify = require('gulp-minify');
 
 // Compiling scss into css task
 gulp.task('sass', function() {
@@ -30,6 +31,18 @@ gulp.task('images', function() {
 	return gulp.src('./app/assets/*')
 		.pipe(cache(imagemin()))
 		.pipe(gulp.dest('./dist/assets'))
+});
+
+// Minifying javascript files
+gulp.task('compressJs', function(){
+	return gulp.src('./app/js/*')
+		.pipe(minify({
+			ext: {
+				src: '.js',
+				min:'-min.js'
+			}
+		}))
+		.pipe(gulp.dest('./app/js/'))
 });
 
 // Watch task
