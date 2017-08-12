@@ -7,9 +7,9 @@ var cache = require('gulp-cache');
 
 // Compiling scss into css task
 gulp.task('sass', function() {
-	return gulp.src('app/scss/**/*.scss')
+	return gulp.src('./app/scss/**/*.scss')
 		.pipe(sass())
-		.pipe(gulp.dest('app/css'))
+		.pipe(gulp.dest('./app/css'))
 		.pipe(browserSync.reload({
 			stream: true
 		}))
@@ -20,32 +20,26 @@ gulp.task('browserSync', function() {
 	browserSync.init({
 		notify: false,
 		server: {
-			baseDir: 'app'
+			baseDir: './'
 		},
 	})
 });
 
 // Minifying images task
 gulp.task('images', function() {
-	return gulp.src('app/assets/*')
+	return gulp.src('./app/assets/*')
 		.pipe(cache(imagemin()))
-		.pipe(gulp.dest('dist/assets'))
-});
-
-// Copying fonts to Dist
-gulp.task('fonts', function() {
-	return gulp.src('app/fonts/*')
-		.pipe(gulp.dest('dist/fonts'))
+		.pipe(gulp.dest('./dist/assets'))
 });
 
 // Watch task
 gulp.task('watch', ['browserSync', 'sass'], function() {
-	gulp.watch('app/scss/**/*.scss', ['sass']);
-	gulp.watch('app/*.html', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);
+	gulp.watch('./app/scss/**/*.scss', ['sass']);
+	gulp.watch('./app/*.html', browserSync.reload);
+	gulp.watch('./app/js/**/*.js', browserSync.reload);
 });
 
 // Build task
-gulp.task('build', ['images', 'fonts'], function() {
+gulp.task('build', ['images'], function() {
 	console.log('Building files');
 });
