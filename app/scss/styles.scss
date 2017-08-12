@@ -136,6 +136,16 @@ h3 {
 		position: fixed;
 		top: 85%;
 		right: 1%;
+		border-radius: 50%;
+	}
+
+	img:hover, img:focus {
+		box-shadow: 0px 0px 20px 0px $green;	
+	}
+
+	#inner-wrapper-services {
+		padding-top: 100px;
+		margin-top: -100px;
 	}
 }
 
@@ -183,7 +193,7 @@ h3 {
 			border-radius: 0 3px 3px 0;
 		}
 
-/* Position the "left button" to the left and "next button" to the right */
+	/* Position the "left button" to the left and "next button" to the right */
 
 	.prev {
 		left: 20px;
@@ -193,13 +203,13 @@ h3 {
 	    border-radius: 3px 0 0 3px;
 	}
 
-/* On hover, add a black background color with a little bit see-through */
+	/* On hover, add a black background color with a little bit see-through */
 		.prev:hover, .next:hover {
 		    background-color: rgba(0,0,0,0.5);
 		    color: $white;
 		}
 
-/* The dots/bullets/indicators */
+	/* The dots/bullets/indicators */
 		.dot {
 		    cursor:pointer;
 		    height: 13px;
@@ -327,9 +337,7 @@ h3 {
 		margin: 1.5625rem auto 0;
 		font-size: 1rem;
 	}
-
 }
-
 
 // Footer 
 footer {
@@ -381,7 +389,8 @@ footer {
 /* The Close Button */
 .close {
 	position: relative;
-	top: -40px;
+	top: -60px;
+	right: -20px;
     color: #aaa;
     float: right;
     font-size: 2.5rem;
@@ -410,13 +419,27 @@ footer {
     margin: 10% 20%;
     margin-bottom: 0;
     width: 58%; /* Could be more or less, depending on screen size */
+
+    .close {
+		top: -30px;
+		right: -10px;
+	}
 }
 
 // Modal content
 .modal-content {
 	background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 10% auto; /* 15% from the top and centered */
     padding: 40px;
+    text-align: center;
+	line-height: 1.8;
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
+
+    h3 {
+    	background-color: rgba(156,198,179, .5);
+    	padding: 15px 0;
+    }
 }
+
+// Media Queries
