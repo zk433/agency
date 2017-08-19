@@ -4,6 +4,7 @@ body {
 * {
   box-sizing: border-box; }
 
+h1
 h2 {
   color: #737373;
   text-align: center;
@@ -17,11 +18,6 @@ h3 {
   font-weight: 400;
   margin: 0; }
 
-.wrapper {
-  width: 1440px;
-  max-width: 90%;
-  margin: 0 auto; }
-
 .button {
   border: none;
   border-radius: 50px;
@@ -31,7 +27,9 @@ h3 {
   font-weight: 700;
   padding: .8rem 2.5rem;
   font-size: 1.1rem;
-  margin: 0 1.2rem; }
+  margin: 0 1.2rem;
+  margin-bottom: 2rem;
+  display: inline-block; }
 
 .button-small {
   padding: .8rem 1.8rem;
@@ -43,29 +41,24 @@ h3 {
 .button-secondary {
   background-color: rgba(0, 0, 0, 0.18); }
 
-.card {
-  width: 28%;
-  float: left;
-  border-radius: .5rem;
-  padding: 2rem 2rem;
-  text-align: center;
-  line-height: 1.8;
-  color: #737373;
-  -webkit-box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.2); }
+.wrapper {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto; }
 
 #banner {
-  background-image: url(../assets/banner_with_gradients.jpg);
+  background-image: url(../assets/banner_sml3.jpg);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
   #banner header {
     padding: 2rem 0; }
   #banner #logo {
     color: #ffffff;
     float: left;
-    font-size: 1.35rem;
-    margin: 0; }
+    font-size: 1.3rem;
+    margin: 0;
+    margin-top: -2px; }
     #banner #logo span {
       font-weight: 700; }
   #banner nav {
@@ -77,142 +70,90 @@ h3 {
       font-size: 1.2rem;
       font-weight: 700; }
   #banner .content {
-    padding: 12rem 0 5rem 0; }
+    padding: 10rem 0 0 0; }
     #banner .content .title, #banner .content .subtitle {
       color: #ffffff;
       text-align: center; }
     #banner .content .title {
-      font-size: 3rem;
+      font-size: 2.2rem;
       font-weight: 700;
       margin: 0; }
     #banner .content .subtitle {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 400;
       margin-bottom: 7.5rem; }
     #banner .content .button-wrapper {
-      text-align: center;
-      margin: 3em 0; }
+      text-align: center; }
+
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  #banner {
+    background-image: url(../assets/banner_med.jpg); }
+    #banner .content {
+      padding: 10rem 0 1rem 0; }
+      #banner .content .title {
+        font-size: 3.2rem; }
+      #banner .content .subtitle {
+        font-size: 2rem; } }
+
+@media screen and (min-width: 1024px) {
+  #banner {
+    background-image: url(../assets/banner_with_gradients.jpg); }
+    #banner .content {
+      padding: 12rem 0 5rem 0; }
+      #banner .content .title {
+        font-size: 3.5rem; }
+      #banner .content .subtitle {
+        font-size: 2rem; }
+      #banner .content .button {
+        display: inline;
+        margin-bottom: 0; } }
 
 #services {
   background-color: #f3f3f3;
-  padding: 2rem 2rem 21rem;
   position: relative; }
-  #services img {
-    width: 55px;
-    height: 55px;
-    position: fixed;
-    top: 85%;
-    right: 1%;
-    border-radius: 50%; }
-  #services img:hover, #services img:focus {
-    box-shadow: 0px 0px 20px 0px #9CC6B3; }
-  #services #inner-wrapper-services {
-    padding-top: 100px;
-    margin-top: -100px; }
+  #services .service {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid #D9D9D9; }
+    #services .service h3 {
+      padding-bottom: 1rem; }
+    #services .service button {
+      margin: 2rem auto 1rem;
+      display: block; }
 
-.service {
-  background-color: #EFE0EC;
-  margin: -5rem 2.5% 0 2.5%; }
-  .service h3 {
-    padding-bottom: .2rem; }
-  .service button {
-    margin-top: 1rem; }
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  #services .service {
+    max-width: 70%;
+    margin: 0 auto; } }
 
-#portfolio {
-  background-color: #ffffff;
-  padding: 3rem 0 3rem 0;
-  /* Position the "left button" to the left and "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */
-  /* The dots/bullets/indicators */ }
-  #portfolio h2 {
-    padding-bottom: 2rem; }
-  #portfolio .slideshowContainer {
-    width: 50%;
-    position: relative;
-    margin: 0 21%; }
-  #portfolio .mySlide {
-    display: none; }
-  #portfolio .prev, #portfolio .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -1.875rem;
-    padding: 1rem;
-    color: #D9D9D9;
-    font-size: 2rem;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0; }
-  #portfolio .prev {
-    left: 20px; }
-  #portfolio .next {
-    right: -80px;
-    border-radius: 3px 0 0 3px; }
-  #portfolio .prev:hover, #portfolio .next:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff; }
-  #portfolio .dot {
-    cursor: pointer;
-    height: 13px;
-    width: 13px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease; }
-  #portfolio .active, #portfolio .dot:hover {
-    background-color: #9CC6B3; }
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1s; }
-
-@-webkit-keyframes fade {
-  0% {
-    opacity: .4; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fade {
-  0% {
-    opacity: .4; }
-  100% {
-    opacity: 1; } }
-
-#pricing {
-  background-color: #f3f3f3;
-  padding: 2rem 0 36rem 0; }
-  #pricing h2 {
-    padding: 1rem 0 5rem; }
-  #pricing h3 {
-    color: #737373; }
-  #pricing h4 {
-    color: #9CC6B3;
-    font-size: 1.5rem;
-    margin: 0;
-    font-weight: 400; }
-  #pricing .card {
-    background-color: #ffffff; }
-  #pricing .card:last-child {
-    position: relative;
-    left: -20px; }
-  #pricing .wrapper {
-    margin-left: 13%; }
-  #pricing .hightlight {
-    background-color: #EFE0EC;
-    z-index: 2;
-    margin: -1.2rem 0 0;
-    position: relative;
-    left: -10px; }
-  #pricing li {
-    list-style-type: circle;
-    text-align: left; }
+@media screen and (min-width: 1024px) {
+  #services {
+    background-color: #f3f3f3;
+    padding: 2rem 2rem 25rem;
+    position: relative; }
+    #services .service {
+      background-color: #EFE0EC;
+      margin: -3.5rem 2.5% 0 2.5%; }
+      #services .service h3 {
+        padding-bottom: .2rem; }
+      #services .service button {
+        margin-top: 1rem; }
+    #services .card {
+      width: 28%;
+      float: left;
+      border-radius: .5rem;
+      padding: 2rem 2rem;
+      text-align: center;
+      line-height: 1.8;
+      color: #737373;
+      -webkit-box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.2); }
+    #services #inner-wrapper-services {
+      padding-top: 100px;
+      margin-top: -100px; } }
 
 #contact {
-  background-image: url(../assets/contact_with_gradients.jpg);
+  background-image: url(../assets/contact_sml.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 3.5rem; }
@@ -224,7 +165,7 @@ h3 {
   #contact .formContent {
     background-color: #EFE0EC;
     border-radius: 1.25rem;
-    width: 35%;
+    width: 100%;
     height: 27rem;
     margin: 0 auto;
     padding: 0 2rem;
@@ -245,6 +186,20 @@ h3 {
     margin: 1.5625rem auto 0;
     font-size: 1rem; }
 
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  #contact {
+    background-image: url(../assets/contact_med.jpg); }
+    #contact .formContent {
+      width: 50%;
+      min-width: 25rem; } }
+
+@media screen and (min-width: 1024px) {
+  #contact {
+    background-image: url(../assets/contact_with_gradients.jpg); }
+    #contact .formContent {
+      width: 40%;
+      min-width: 35rem; } }
+
 footer {
   height: 3.2rem;
   background: linear-gradient(to right, #7569B8, #FF8AD4);
@@ -255,90 +210,41 @@ footer {
     font-size: 1rem;
     font-weight: 700;
     position: absolute;
+    margin-left: 10px; }
+  footer .socialMedia {
+    float: right; }
+    footer .socialMedia img {
+      margin-top: 15px;
+      margin-right: 20px;
+      height: 25px;
+      width: 25px; }
+
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  footer p {
     margin: 0;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%); }
-  footer .socialMedia {
-    float: right; }
-    footer .socialMedia img {
-      margin-top: 15px;
-      margin-right: 30px;
-      height: 25px;
-      width: 25px; }
+  footer .socialMedia img {
+    margin-top: 15px;
+    margin-right: 20px;
+    height: 25px;
+    width: 25px; }
   footer .socialMedia:last-child {
-    margin-right: 40px; }
+    margin-right: 30px; } }
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */ }
-
-/* The Close Button */
-.close {
-  position: relative;
-  top: -60px;
-  right: -20px;
-  color: #aaa;
-  float: right;
-  font-size: 2.5rem;
-  font-weight: 400; }
-
-.close:hover,
-.close:focus {
-  color: #9CC6B3;
-  text-decoration: none;
-  cursor: pointer; }
-
-#videoModal, #webDev, #dev, #seo {
-  display: none;
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */ }
-
-.modal-content-video {
-  margin: 10% 20%;
-  margin-bottom: 0;
-  width: 58%;
-  /* Could be more or less, depending on screen size */ }
-  .modal-content-video .close {
-    top: -30px;
-    right: -10px; }
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  /* 15% from the top and centered */
-  padding: 40px;
-  text-align: center;
-  line-height: 1.8;
-  border: 1px solid #888;
-  width: 50%;
-  /* Could be more or less, depending on screen size */ }
-  .modal-content h3 {
-    background-color: rgba(156, 198, 179, 0.5);
-    padding: 15px 0; }
+@media screen and (min-width: 1024px) {
+  footer p {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+  footer .socialMedia img {
+    margin-top: 15px;
+    margin-right: 30px;
+    height: 25px;
+    width: 25px; }
+  footer .socialMedia:last-child {
+    margin-right: 40px; } }
